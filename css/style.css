@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: red;
+}
+
+main h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: blue;
+}
+
+footer h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: green;
+}
