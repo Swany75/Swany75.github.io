@@ -1,0 +1,1 @@
+// Description: This file contains the JavaScript code for the website.
