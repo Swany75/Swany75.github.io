@@ -4,18 +4,48 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header ol {
+    list-style:lower-alpha;
+}
+
+header .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+header img {
+    margin: 0;
+    padding: 10px;
+    width: 250px;;
 }
 
 header h1 {
     text-align: center;
     margin: 20px 0;
-    color: red;
+    color: rgb(255, 127, 39);
+    background-color: #373737;
 }
 
-main h1 {
+main h2 {
     text-align: center;
     margin: 20px 0;
-    color: blue;
+    color: cyan;
+    background-color: #373737;
+}
+
+main section {
+    margin: 10px;
 }
 
 footer h1 {
