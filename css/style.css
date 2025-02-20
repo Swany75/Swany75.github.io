@@ -13,7 +13,22 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el body ocupe toda la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #373737;
+}
+
+.main-container {
+    width: 950px; /* Ancho del folio A4 */
+    height: 100%; /* Alto del folio A4 */
+    padding: 20px;
+    background-color: #263238;
+    border: 2px solid #16b290;
+    box-sizing: border-box;
 }
 
 /*** HEADER *****************************************************************************************/
@@ -22,7 +37,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
 }
 
 header .wrapper {
@@ -49,8 +63,6 @@ header .about {
     padding: 20px;
     font-family: 'Spectral', serif;
     border-radius: 15px;
-    border: 2px solid #16b290;
-    background-color: #263238;
 }
 
 header .about ol {
