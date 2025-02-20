@@ -19,7 +19,37 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #373737;
+    background-color: #121212;
+}
+
+@keyframes neonGlowLeft {
+    0% {
+        box-shadow: 0 0 5px #16b290;
+        top: 0;
+    }
+    50% {
+        box-shadow: 0 0 15px #16b290;
+        top: 90%;
+    }
+    100% {
+        box-shadow: 0 0 5px #16b290;
+        top: 0;
+    }
+}
+
+@keyframes neonGlowRight {
+    0% {
+        box-shadow: 0 0 5px #16b290;
+        top: 90%;
+    }
+    50% {
+        box-shadow: 0 0 15px #16b290;
+        top: 0;
+    }
+    100% {
+        box-shadow: 0 0 5px #16b290;
+        top: 90%;
+    }
 }
 
 .main-container {
@@ -27,8 +57,89 @@ body {
     height: 100%; /* Alto del folio A4 */
     padding: 20px;
     background-color: #263238;
-    border: 2px solid #16b290;
+    border-left: 2px solid #16b290; /* Borde en el lado izquierdo */
+    border-right: 2px solid #16b290; /* Borde en el lado derecho */
     box-sizing: border-box;
+    position: relative;
+}
+
+.main-container::before,
+.main-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%; /* Altura completa del contenedor */
+    background-color: transparent; /* Hacer el "palito" invisible */
+    box-shadow: 0 0 5px #16b290; /* Efecto de resplandor */
+}
+
+.main-container::before {
+    left: -2px; /* Posición en el borde izquierdo */
+    animation: neonGlowLeft 6s infinite; /* Animación más lenta */
+}
+
+.main-container::after {
+    right: -2px; /* Posición en el borde derecho */
+    animation: neonGlowRight 6s infinite; /* Animación más lenta y desincronizada */
+}@keyframes neonGlowLeft {
+    0% {
+        top: 0;
+        box-shadow: 0 0 5px #16b290;
+    }
+    50% {
+        top: 90%;
+        box-shadow: 0 0 15px #16b290;
+    }
+    100% {
+        top: 0;
+        box-shadow: 0 0 5px #16b290;
+    }
+}
+
+@keyframes neonGlowRight {
+    0% {
+        top: 90%;
+        box-shadow: 0 0 5px #16b290;
+    }
+    50% {
+        top: 0;
+        box-shadow: 0 0 15px #16b290;
+    }
+    100% {
+        top: 90%;
+        box-shadow: 0 0 5px #16b290;
+    }
+}
+
+.main-container {
+    width: 950px; /* Ancho del folio A4 */
+    height: 100%; /* Alto del folio A4 */
+    padding: 20px;
+    background-color: #263238;
+    border-left: 2px solid #16b290; /* Borde en el lado izquierdo */
+    border-right: 2px solid #16b290; /* Borde en el lado derecho */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-container::before,
+.main-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 25px; /* Altura de la bola de luz */
+    background-color: transparent; /* Hacer el "palito" invisible */
+    box-shadow: 0 0 15px #16b290; /* Efecto de resplandor */
+}
+
+.main-container::before {
+    left: -2px; /* Posición en el borde izquierdo */
+    animation: neonGlowLeft 6s infinite; /* Animación más lenta */
+}
+
+.main-container::after {
+    right: -2px; /* Posición en el borde derecho */
+    animation: neonGlowRight 6s infinite; /* Animación más lenta y desincronizada */
 }
 
 /*** HEADER *****************************************************************************************/
