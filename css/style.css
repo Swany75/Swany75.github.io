@@ -62,12 +62,12 @@ body {
 }
 
 .main-container {
-    width: 950px; /* Ancho del folio A4 */
-    height: 100%; /* Alto del folio A4 */
-    padding: 20px;
+    width: 950px;
+    height: 100%;
+    padding: 1075px 20px 2000px 20px;
     background-color: #263238;
-    border-left: 2px solid #16b290; /* Borde en el lado izquierdo */
-    border-right: 2px solid #16b290; /* Borde en el lado derecho */
+    border-left: 2px solid #16b290;
+    border-right: 2px solid #16b290;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -75,29 +75,25 @@ body {
     position: relative;
 }
 
-main {
-    flex: 1;
-}
-
-.main-container::before,
-.main-container::after {
+.main-container::before, .main-container::after {
     content: '';
     position: absolute;
     width: 2px;
-    height: 25px; /* Altura de la bola de luz */
-    background-color: transparent; /* Hacer el "palito" invisible */
-    box-shadow: 0 0 15px #16b290; /* Efecto de resplandor */
+    height: 25px;
+    background-color: transparent;
+    box-shadow: 0 0 15px #16b290;
 }
 
 .main-container::before {
-    left: -2px; /* Posición en el borde izquierdo */
-    animation: neonGlowLeft 6s infinite; /* Animación más lenta */
+    left: -2px;
+    animation: neonGlowLeft 12s infinite;
 }
 
 .main-container::after {
-    right: -2px; /* Posición en el borde derecho */
-    animation: neonGlowRight 6s infinite; /* Animación más lenta y desincronizada */
+    right: -2px;
+    animation: neonGlowRight 12s infinite;
 }
+
 
 /*** HEADER *****************************************************************************************/
 
@@ -113,7 +109,7 @@ header .wrapper {
 
 header .profile-container {
     display: flex;
-    flex-direction: row; /* Cambiado de column a row */
+    flex-direction: row;
     align-items: center;
 }
 
@@ -121,13 +117,13 @@ header img {
     margin: 0;
     padding: 10px;
     width: 250px;
-    margin-right: 20px; /* Añadido para separar la imagen del texto */
+    margin-right: 20px;
 }
 
 header .about {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Cambiado de center a flex-start */
+    align-items: flex-start;
     padding: 20px;
     font-family: 'Spectral', serif;
     border-radius: 15px;
@@ -169,7 +165,7 @@ header ol li {
 header nav {
     display: flex;
     justify-content: space-around;
-    width: 100%; /* Asegura que los botones ocupen toda la línea */
+    width: 100%;
     margin-top: 20px;
     gap: 10px;
 }
@@ -217,16 +213,16 @@ main h2 {
 }
 
 .cert-box {
-    width: 30%; /* Ajusta el tamaño para que quepan 3 en una fila */
+    width: 30%;
     margin: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Asegura que el contenido no se desborde */
+    overflow: hidden;
 }
 
 .cert-box img {
     width: 100%;
     height: auto;
-    display: block; /* Elimina el espacio debajo de la imagen */
+    display: block;
 }
 
 .cert-box.mastermind:hover {
