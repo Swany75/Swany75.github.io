@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/usuario/repositorio@versión/ruta/HackNerdFont-Regular.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /*** GENERAL ****************************************************************************************/
 
@@ -12,10 +13,18 @@
     color: white;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Asegura que el body ocupe toda la ventana */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,65 +33,6 @@ body {
 
 @keyframes neonGlowLeft {
     0% {
-        box-shadow: 0 0 5px #16b290;
-        top: 0;
-    }
-    50% {
-        box-shadow: 0 0 15px #16b290;
-        top: 90%;
-    }
-    100% {
-        box-shadow: 0 0 5px #16b290;
-        top: 0;
-    }
-}
-
-@keyframes neonGlowRight {
-    0% {
-        box-shadow: 0 0 5px #16b290;
-        top: 90%;
-    }
-    50% {
-        box-shadow: 0 0 15px #16b290;
-        top: 0;
-    }
-    100% {
-        box-shadow: 0 0 5px #16b290;
-        top: 90%;
-    }
-}
-
-.main-container {
-    width: 950px; /* Ancho del folio A4 */
-    height: 100%; /* Alto del folio A4 */
-    padding: 20px;
-    background-color: #263238;
-    border-left: 2px solid #16b290; /* Borde en el lado izquierdo */
-    border-right: 2px solid #16b290; /* Borde en el lado derecho */
-    box-sizing: border-box;
-    position: relative;
-}
-
-.main-container::before,
-.main-container::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%; /* Altura completa del contenedor */
-    background-color: transparent; /* Hacer el "palito" invisible */
-    box-shadow: 0 0 5px #16b290; /* Efecto de resplandor */
-}
-
-.main-container::before {
-    left: -2px; /* Posición en el borde izquierdo */
-    animation: neonGlowLeft 6s infinite; /* Animación más lenta */
-}
-
-.main-container::after {
-    right: -2px; /* Posición en el borde derecho */
-    animation: neonGlowRight 6s infinite; /* Animación más lenta y desincronizada */
-}@keyframes neonGlowLeft {
-    0% {
         top: 0;
         box-shadow: 0 0 5px #16b290;
     }
@@ -119,7 +69,14 @@ body {
     border-left: 2px solid #16b290; /* Borde en el lado izquierdo */
     border-right: 2px solid #16b290; /* Borde en el lado derecho */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     position: relative;
+}
+
+main {
+    flex: 1;
 }
 
 .main-container::before,
@@ -229,8 +186,8 @@ header nav .nav-item {
 
 /* Colores para los botones */
 .information { background-color: #E10600; }
-.projects { background-color: #48A23F; }
-.studies, .hobbies, .timeline { background-color: #48A23F; }
+.projects, .timeline { background-color: #48A23F; }
+.studies, .hobbies { background-color: #373A36; }
 .contact { background-color: #0061A0; }
 
 /* Efecto hover */
@@ -243,21 +200,72 @@ header nav .nav-item {
 /*** MAIN *******************************************************************************************/
 
 main h2 {
-    text-align: center;
+    text-align: left;
     margin: 20px 0;
-    color: cyan;
+    font-family: 'Hack Nerd Font', monospace;
+    color: #00cc00;
+    background-color: #1c262c;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.certs-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.cert-box {
+    width: 30%; /* Ajusta el tamaño para que quepan 3 en una fila */
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.cert-box img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+.cert-box.mastermind:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #D92250;
+}
+
+.cert-box.cisco:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #6eba48;
 }
 
 /*** FOOTER *****************************************************************************************/
 
 
-footer {
+.c64-footer {
+    color: #00FF00;
     text-align: center;
-    margin: 50px 0;
-    color: green;
+    padding: 10px;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 12px;
+    width: 100%;
 }
 
-footer p {
-    font-family: 'Hack Nerd Font', monospace;
-    color: whitesmoke;
+.c64-stripes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
 }
+
+.stripe {
+    width: 100px;
+    height: 8px;
+    transform: skewX(-40deg);
+}
+
+.red { background-color: #D12625; }
+.orange { background-color: #DA6241; }
+.yellow { background-color: #F1CB29; }
+.green { background-color: #4BB249; }
+.blue { background-color: #009EDA; }
