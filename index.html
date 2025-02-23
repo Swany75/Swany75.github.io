@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swany | Juan Dalmau</title>
+    <title>Swany75 - Juan Dalmau</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@latest/css/nerd-fonts.min.css">
     <link rel="icon" href="https://i.pinimg.com/736x/78/57/5d/78575df8cf87f8cd15321b124daea717.jpg">
@@ -15,7 +15,14 @@
                 <div class="profile-container">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png" alt="Profile Picture">
                     <div class="info">
-                        <h1>Juan Dalmau</h1>
+                        <div class="title">
+                            <h1>Juan Dalmau</h1>
+                            <div class="flags">
+                                <img src="img/flags/english.png" alt="English" class="flag">
+                                <img src="img/flags/spanish.png" alt="Español" class="flag">
+                                <img src="img/flags/catalan.png" alt="Català" class="flag">
+                            </div>
+                        </div>
                         <ol>
                             <li>🎂 20 years old</li>
                             <li>💻 Technician in Microinformatics Systems and Networks</li>
@@ -35,58 +42,34 @@
             </div>
         </header>
         <main>
-            <h2># Information</h2>
-            <h2># Projects</h2>
-            <h2># Certificates</h2>
-            <div class="certs-section">
-                <!-- Certificados existentes -->
-                <div class="cert-box mastermind">
-                    <img src="img/Mastermind-Comoprotegerseenlared.png" alt="Mastermind Certificate 1">
-                </div>
-                <div class="cert-box mastermind">
-                    <img src="img/Mastermind-IntroduccionatecnicasOSINT.png" alt="Mastermind Certificate 2">
-                </div>
-                <div class="cert-box mastermind">
-                    <img src="img/Mastermind-IntroduccionalaIngenieriaSocial.png" alt="Mastermind Certificate 3">
-                </div>
-                <!-- Nuevos certificados de Cisco -->
-                <div class="cert-box cisco">
-                    <img src="img/CISCO-IntroduccionaCiberseguridad.png" alt="Cisco Certificate 1">
-                </div>
-                <div class="cert-box cisco">
-                    <img src="img/CISCO-PythonEssentials1.png" alt="Cisco Certificate 2">
-                </div>
-                <div class="cert-box cisco">
-                    <img src="img/CISCO-NetworkDefenseEuroCyberRace2024.png" alt="Cisco Certificate 3">
+            <div class="Information">
+                <img class="test" src="img/meme.png" alt="temporalimg">
+            </div>
+            <div class="certs">
+                <h2 onclick="ocultItems()">
+                    <span id="arrow">▶</span> Certificates
+                </h2>
+                <div id="certificates-toggle" class="certs-section">
+                    <div class="cert-box mastermind">
+                        <img src="img/certificates/Mastermind-Comoprotegerseenlared.png" alt="Mastermind Certificate 1">
+                    </div>
+                    <div class="cert-box mastermind">
+                        <img src="img/certificates/Mastermind-IntroduccionatecnicasOSINT.png" alt="Mastermind Certificate 2">
+                    </div>
+                    <div class="cert-box mastermind">
+                        <img src="img/certificates/Mastermind-IntroduccionalaIngenieriaSocial.png" alt="Mastermind Certificate 3">
+                    </div>
+                    <div class="cert-box cisco">
+                        <img src="img/certificates/CISCO-IntroduccionaCiberseguridad.png" alt="Cisco Certificate 1">
+                    </div>
+                    <div class="cert-box cisco">
+                        <img src="img/certificates/CISCO-PythonEssentials1.png" alt="Cisco Certificate 2">
+                    </div>
+                    <div class="cert-box cisco">
+                        <img src="img/certificates/CISCO-NetworkDefenseEuroCyberRace2024.png" alt="Cisco Certificate 3">
+                    </div>
                 </div>
             </div>
-            <h2># Hobbies</h2>
-            <h2># Timeline</h2>
-            <h2># Contact</h2>
-
-            <!--
-            <h2>Information</h2>
-            <section id="information">
-                <p>Brief introduction about yourself.</p>
-            </section>
-            <h2>Studies</h2>
-            <section id="studies">
-                <p>Details about your educational background.</p>
-            </section>
-            <h2>Projects</h2>
-            <section id="projects">
-                <p>Details about your projects.</p>
-            </section>
-            <h2>Timeline</h2>
-            <section id="timeline">
-                <p>Chronological order of your achievements.</p>
-            </section>
-            <h2>Hobbies</h2>
-            <section id="hobbies">
-                <p>Details about your hobbies and interests.</p>
-            </section>
-            -->
-            
         </main>
         <footer class="c64-footer">
             <p>&copy; 2025 Juan Dalmau. All rights reserved.</p>
@@ -99,5 +82,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

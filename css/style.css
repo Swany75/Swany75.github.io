@@ -22,8 +22,6 @@ html, body {
 }
 
 body {
-    margin: 0;
-    padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -101,6 +99,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
 }
 
 header .wrapper {
@@ -141,7 +140,7 @@ header .about ol li {
 }
 
 header h1 {
-    text-align: center;
+    text-align: left;
     font-family: 'Hack Nerd Font', monospace;
     color: #00FF00;
     background-color: #263238;
@@ -180,49 +179,122 @@ header nav .nav-item {
     transition: 0.3s;
 }
 
-/* Colores para los botones */
 .information { background-color: #E10600; }
 .projects, .timeline { background-color: #48A23F; }
 .studies, .hobbies { background-color: #373A36; }
 .contact { background-color: #0061A0; }
 
-/* Efecto hover */
 .nav-item:hover {
     opacity: 0.8;
     transform: scale(1.05);
 }
 
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.flags {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    background-color: #222222; /* Color dorado */
+    border: 1px solid #16B290;
+    border-radius: 10px;
+}
+
+.flags img {
+    width: 70px;
+    height: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.flag.grayscale {
+    filter: grayscale(100%);
+}
 
 /*** MAIN *******************************************************************************************/
 
-main h2 {
-    text-align: left;
-    margin: 20px 0;
+h2 {
     font-family: 'Hack Nerd Font', monospace;
     color: #00cc00;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#arrow {
+    transition: transform 0.3s ease;
+    color: #00cc00;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.certs {
     background-color: #1c262c;
     border-radius: 15px;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .certs-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 40px 0;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .cert-box {
     width: 30%;
-    margin: 10px;
+    margin: 10px 0;
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cert-box div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .cert-box img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 .cert-box.mastermind:hover {
@@ -233,6 +305,27 @@ main h2 {
 .cert-box.cisco:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #6eba48;
+}
+
+.certs-section {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.certs-section[style*="hidden"] {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+.hidden {
+    animation: fadeOutDown 0.3s ease forwards;
+}
+
+.visible {
+    animation: fadeInUp 0.3s ease forwards;
 }
 
 /*** FOOTER *****************************************************************************************/
@@ -265,3 +358,13 @@ main h2 {
 .yellow { background-color: #F1CB29; }
 .green { background-color: #4BB249; }
 .blue { background-color: #009EDA; }
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 0; 
+    width: 50%;
+    border-radius: 10px;
+}
