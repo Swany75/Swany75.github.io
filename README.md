@@ -2,4 +2,10 @@
 
 Welcome to my website!
 
-![pirategif](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhH8gwjgVadqF7clVCQ35j0CT6argwFpjmg&s)
+![pirategif](img/pirate.gif)
+
+## About
+
+This repository contains the source code for my personal website. It showcases my projects, blog posts, and other content.
+
+To see my website go to [swany75.github.io](https://swany75.github.io)
