@@ -383,52 +383,36 @@ h2 {
     border-radius: 10px;
 }
 
-
-
-/*** TRASH ******************************************************************************************
-
-.vortex {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        from 0deg,
-        #00FF00 0deg,
-        #00FF00 10deg,
-        transparent 10deg,
-        transparent 60deg,
-        #00FF00 60deg,
-        #00FF00 70deg,
-        transparent 70deg,
-        transparent 120deg,
-        #00FF00 120deg,
-        #00FF00 130deg,
-        transparent 130deg,
-        transparent 180deg,
-        #00FF00 180deg,
-        #00FF00 190deg,
-        transparent 190deg,
-        transparent 240deg,
-        #00FF00 240deg,
-        #00FF00 250deg,
-        transparent 250deg,
-        transparent 300deg,
-        #00FF00 300deg,
-        #00FF00 310deg,
-        transparent 310deg,
-        transparent 360deg
-    );
-    transform: translate(-50%, -50%);
-    animation: spin 30s linear infinite;
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-@keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-} */
+.social li {
+    list-style: none;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1c262c;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #16B290;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+/*** TRASH ******************************************************************************************
