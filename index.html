@@ -46,11 +46,33 @@
             <div class="Information">
                 <img class="test" src="img/meme.png" alt="temporalimg">
             </div>
-            <div class="certs">
-                <h2 onclick="ocultItems()">
+            <div class="window">
+                <h2 onclick="ocultItems('projects-toggle')">
+                    <span id="arrow">▶</span> Projects
+                </h2>
+                <div id="projects-toggle" class="window-section hidden" style="display: none;">
+                    <div class="projects-container">
+                        <div class="project-item">
+                            <img src="img/projects/image.png" alt="Arch Linux Dotfiles">
+                        </div>
+                        <div class="project-item">
+                            <img src="img/projects/media-server.png" alt="Media Server & NAS">
+                        </div>
+                        <div class="project-item">
+                            <img src="img/projects/escambri.jpg" alt="Escambri in Python">
+                        </div>
+                        <div class="project-item">
+                            <img src="img/projects/tic-tac-toe.jpg" alt="Tic Tac Toe in Python">
+                        </div>
+                    </div>
+                    <p>Other projects on my <a href="#">github</a></p>
+                </div>
+            </div>
+            <div class="window">
+                <h2 onclick="ocultItems('certificates-toggle')">
                     <span id="arrow">▶</span> Certificates
                 </h2>
-                <div id="certificates-toggle" class="certs-section">
+                <div id="certificates-toggle" class="window-section hidden" style="display: none;">
                     <div class="cert-box mastermind">
                         <img src="img/certificates/Mastermind-Comoprotegerseenlared.png" alt="Mastermind Certificate 1">
                     </div>

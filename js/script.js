@@ -1,22 +1,26 @@
 // Description: This file contains the JavaScript code for the website.
 
-function ocultItems() {
-    let x = document.getElementById("certificates-toggle");
-    let arrow = document.getElementById("arrow");
+function ocultItems(sectionId) {
 
-    if (x.classList.contains("visible")) {
-        x.classList.remove("visible");
-        x.classList.add("hidden");
+    let section = document.getElementById(sectionId);
+    let arrow = section.previousElementSibling.querySelector("#arrow");
+
+    if (section.classList.contains("visible")) {
+
+        section.classList.remove("visible");
+        section.classList.add("hidden");
         arrow.style.transform = "rotate(0deg)";
-        setTimeout(() => {
-            x.style.display = "none";
-        }, 300);
+        setTimeout(() => { section.style.display = "none"; }, 300);
+
     } else {
-        x.style.display = "flex";
-        x.classList.remove("hidden");
-        x.classList.add("visible");
+
+        section.style.display = "flex";
+        section.classList.remove("hidden");
+        section.classList.add("visible");
         arrow.style.transform = "rotate(90deg)";
+
     }
+    
 }
 
 
