@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="main-container">
+
+        <!----- HEADER -------------------------------------------------------------------------------------------------------------------------------------->
+        
         <header>
             <div class="about">
                 <div class="profile-container">
@@ -25,12 +28,13 @@
                         </div>
                         <ol>
                             <li>🎂 20 years old</li>
-                            <li>💻 Technician in Microinformatics Systems and Networks</li>
+                            <li>💻 Technician in Microinformatics Systems Networks</li>
                             <li>🌐 Student in Systems and Network Administration</li>
                             <li>🔐 Ethical Hacking & CyberSecurity Enthusiast</li>
                         </ol>
                     </div>
                 </div>
+                <!--
                 <nav>
                     <button class="nav-item">Information</button>
                     <button class="nav-item">Projects</button>
@@ -39,16 +43,24 @@
                     <button class="nav-item">Timeline</button>
                     <button class="nav-item">Contact</button>
                 </nav>
+                -->
             </div>
         </header>
+
+        <!----- MAIN -------------------------------------------------------------------------------------------------------------------------------------->
+
         <main>
+
             <!----- INFORMATION -------------------------------------------------------------------------------------------------------------------------------------->
+            
             <!--
             <div class="Information">
                 <img class="test" src="img/meme.png" alt="temporalimg">
             </div>
             -->
+
             <!----- PROJECTS -------------------------------------------------------------------------------------------------------------------------------------->
+            
             <div class="window">
                 <h2 onclick="ocultItems('projects-toggle')">
                     <span id="arrow">▶</span> Projects
@@ -57,14 +69,16 @@
                     <div class="projects-container">
                         <div class="project-item">
                             <h3>Arch Linux Custom DE</h3>
-                            <img src="img/projects/arch.png" alt="Arch Linux Dotfiles">
+                            <a href="https://github.com/Swany75/dotfiles" target="_blank">
+                                <img src="img/projects/arch.png" alt="Arch Linux Dotfiles">
+                            </a>
                             <h4 class="not-published">Not Published</h4>
                             <p>My personal dotfiles for my Arch Linux setup. I use i3-gaps as my window manager and Polybar as my status bar.</p>
                         </div>
                         
                         <div class="project-item">
                             <h3>Media Server</h3>
-                            <a href="https://sites.google.com/view/porygon-media-server">
+                            <a href="https://sites.google.com/view/porygon-media-server" target="_blank">
                                 <img src="img/projects/media-server.png" alt="Media Server & NAS">
                             </a>
                             <h4 class="published">Published</h4>
@@ -73,7 +87,7 @@
                         
                         <div class="project-item">
                             <h3>Python Scripts</h3>
-                            <a href="https://github.com/Swany75/Escambri">
+                            <a href="https://github.com/Swany75/Escambri" target="_blank">
                                 <img src="img/projects/escambri.jpg" alt="Escambri in Python">
                             </a>
                             <h4 class="published">Published</h4>
@@ -82,7 +96,9 @@
                         
                         <div class="project-item">
                             <h3>Obsidian Vault</h3>
-                            <img src="img/projects/obsidian.png" alt="Obsidian Vault">
+                            <a href="https://github.com/Swany75/Obsidian" target="_blank">
+                                <img src="img/projects/obsidian.png" alt="Obsidian Vault">
+                            </a>
                             <h4 class="not-published">Not Published</h4>
                             <p>My personal documentation system in Obsidian. I've made significant progress, but it's not finished yet.</p>
                         </div>
@@ -117,6 +133,7 @@
                 </div>
             </div>
         </main>
+        <!--- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------->
         <footer class="c64-footer">
             <p>&copy; 2025 Juan Dalmau. All rights reserved.</p>
             <div class="c64-stripes">
@@ -127,11 +144,11 @@
                 <div class="stripe blue"></div>
             </div>
             <div class="social">
-                <li><a href="#"><img src="img/icons/gmail.svg" alt="GMail"></a></li>
-                <li><a href="#"><img src="img/icons/Github_dark.svg" alt="GitHub"></a></li>
-                <li><a href="#"><img src="img/icons/linkedin.svg" alt="LinkedIn"></a></li>
-                <li><a href="#"><img src="img/icons/obsidian.svg" alt="Obsidian"></a></li>
-                <li><a href="#"><img src="img/icons/discord.svg" alt="Discord"></a></li>
+                <li><a href="#" target="_blank"><img src="img/icons/gmail.svg" alt="GMail"></a></li>
+                <li><a href="https://github.com/Swany75" target="_blank"><img src="img/icons/Github_dark.svg" alt="GitHub"></a></li>
+                <li><a href="#" target="_blank"><img src="img/icons/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="#" target="_blank"><img src="img/icons/obsidian.svg" alt="Obsidian"></a></li>
+                <li><a href="#" target="_blank"><img src="img/icons/discord.svg" alt="Discord"></a></li>
             </div>
         </footer>
     </div>

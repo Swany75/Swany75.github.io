@@ -124,19 +124,17 @@ body {
 
 /*** HEADER *****************************************************************************************/
 
+
 header {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
 
-header .wrapper {
-    flex-direction: row;
-}
-
 header .profile-container {
     display: flex;
-    align-items: center;
+    align-items:flex-start;
+    width: 100%;
 }
 
 header img {
@@ -150,7 +148,6 @@ header .about {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-family: 'Spectral', serif;
     border-radius: 15px;
 }
 
@@ -158,12 +155,19 @@ header .about ol {
     background-color: #1c262c;
     border-radius: 15px;
     padding: 20px;
-    width: 100%;
 }
 
 header .about ol li {
     background-color: #1c262c;
     font-family: 'Source Code Pro', monospace;
+}
+
+header .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
 }
 
 header h1 {
@@ -175,7 +179,6 @@ header h1 {
     transition: text-decoration 0.0s ease;
 }
 
-
 header h1:hover {
     text-decoration: line-through;
     text-decoration-color: black;
@@ -183,6 +186,7 @@ header h1:hover {
 
 header ol {
     margin-top: 20px;
+    flex-grow: 1;
 }
 
 header ol li {
@@ -229,7 +233,7 @@ header nav .nav-item {
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    background-color: #222222; /* Color dorado */
+    background-color: #222222;
     border: 1px solid #16B290;
     border-radius: 10px;
 }
