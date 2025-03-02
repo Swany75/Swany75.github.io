@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swany75 - Juan Dalmau</title>
     <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/stars.css" class="rel">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@latest/css/nerd-fonts.min.css">
     <link rel="icon" href="https://i.pinimg.com/736x/78/57/5d/78575df8cf87f8cd15321b124daea717.jpg">
 </head>
@@ -33,19 +32,23 @@
                     </div>
                 </div>
                 <nav>
-                    <button class="nav-item information">Information</button>
-                    <button class="nav-item projects">Projects</button>
-                    <button class="nav-item studies">Studies</button>
-                    <button class="nav-item hobbies">Hobbies</button>
-                    <button class="nav-item timeline">Timeline</button>
-                    <button class="nav-item contact">Contact</button>
+                    <button class="nav-item">Information</button>
+                    <button class="nav-item">Projects</button>
+                    <button class="nav-item">Studies</button>
+                    <button class="nav-item">Hobbies</button>
+                    <button class="nav-item">Timeline</button>
+                    <button class="nav-item">Contact</button>
                 </nav>
             </div>
         </header>
         <main>
+            <!----- INFORMATION -------------------------------------------------------------------------------------------------------------------------------------->
+            <!--
             <div class="Information">
                 <img class="test" src="img/meme.png" alt="temporalimg">
             </div>
+            -->
+            <!----- PROJECTS -------------------------------------------------------------------------------------------------------------------------------------->
             <div class="window">
                 <h2 onclick="ocultItems('projects-toggle')">
                     <span id="arrow">▶</span> Projects
@@ -53,25 +56,41 @@
                 <div id="projects-toggle" class="window-section hidden" style="display: none;">
                     <div class="projects-container">
                         <div class="project-item">
+                            <h3>Arch Linux Custom DE</h3>
                             <img src="img/projects/arch.png" alt="Arch Linux Dotfiles">
+                            <h4 class="not-published">Not Published</h4>
+                            <p>My personal dotfiles for my Arch Linux setup. I use i3-gaps as my window manager and Polybar as my status bar.</p>
                         </div>
+                        
                         <div class="project-item">
+                            <h3>Media Server</h3>
                             <a href="https://sites.google.com/view/porygon-media-server">
                                 <img src="img/projects/media-server.png" alt="Media Server & NAS">
                             </a>
+                            <h4 class="published">Published</h4>
+                            <p>My personal media server and NAS. I use Jellyfin for media streaming and Nextcloud for cloud storage.</p>
                         </div>
+                        
                         <div class="project-item">
+                            <h3>Python Scripts</h3>
                             <a href="https://github.com/Swany75/Escambri">
                                 <img src="img/projects/escambri.jpg" alt="Escambri in Python">
                             </a>
+                            <h4 class="published">Published</h4>
+                            <p>I enjoy programming in Python. I've created several scripts, such as Tic-Tac-Toe and a Discord bot, but my most ambitious project is Brisca.</p>
                         </div>
+                        
                         <div class="project-item">
-                            <img src="img/projects/obsidian.png" alt="Tic Tac Toe in Python">
+                            <h3>Obsidian Vault</h3>
+                            <img src="img/projects/obsidian.png" alt="Obsidian Vault">
+                            <h4 class="not-published">Not Published</h4>
+                            <p>My personal documentation system in Obsidian. I've made significant progress, but it's not finished yet.</p>
                         </div>
                     </div>
-                    <p>Other projects on my <a href="#">github</a></p>
-                </div>
+                    <p class="more-projects">Check out more of my projects on <a href="https://github.com/Swany75?tab=repositories">GitHub</a>.</p>                </div>
             </div>
+            
+            <!----- STUDIES -------------------------------------------------------------------------------------------------------------------------------------->
             <div class="window">
                 <h2 onclick="ocultItems('certificates-toggle')">
                     <span id="arrow">▶</span> Certificates

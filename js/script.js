@@ -25,16 +25,25 @@ function ocultItems(sectionId) {
 
 
 function selectLang() {
+
     const flags = document.querySelectorAll('.flag');
 
     for (let i = 0; i < flags.length; i++) {
+    
         flags[i].addEventListener('click', function() {
+    
             for (let j = 0; j < flags.length; j++) {
+    
                 flags[j].classList.add('grayscale');
+    
             }
+    
             this.classList.remove('grayscale');
+    
         });
+    
     }
+
 }
 
 document.addEventListener('DOMContentLoaded', selectLang);

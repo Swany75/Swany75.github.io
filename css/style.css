@@ -3,7 +3,21 @@
 @import url('https://cdn.jsdelivr.net/gh/usuario/repositorio@versión/ruta/HackNerdFont-Regular.woff2');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/*** GENERAL ****************************************************************************************/
+/*** VARIABLES **************************************************************************************/
+
+:root {
+    --amstrad-dark-grey: #373A36;
+    --amstrad-light-grey: #53565A;
+    --amstrad-red: #E10600;
+    --amstrad-blue: #0061A0;
+    --amstrad-green: #48A23F;
+    --hacker-green: #00FF00;
+    --terminal: #1C262C;
+    --background: #263238;
+    --cyan-khan: #16B290;
+}
+
+/*** RESET ******************************************************************************************/
 
 * {
     margin: 0;
@@ -12,6 +26,8 @@
     list-style: none;
     color: white;
 }
+
+/*** GENERAL ****************************************************************************************/
 
 html, body {
     height: 100%;
@@ -26,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #373A36
+    background-color: #373A36;
 }
 
 
@@ -111,7 +127,6 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 15px;
 }
 
@@ -121,7 +136,6 @@ header .wrapper {
 
 header .profile-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -136,7 +150,6 @@ header .about {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
     font-family: 'Spectral', serif;
     border-radius: 15px;
 }
@@ -145,6 +158,7 @@ header .about ol {
     background-color: #1c262c;
     border-radius: 15px;
     padding: 20px;
+    width: 100%;
 }
 
 header .about ol li {
@@ -161,6 +175,7 @@ header h1 {
     transition: text-decoration 0.0s ease;
 }
 
+
 header h1:hover {
     text-decoration: line-through;
     text-decoration-color: black;
@@ -176,7 +191,7 @@ header ol li {
 
 header nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     margin-top: 20px;
     gap: 10px;
@@ -192,10 +207,9 @@ header nav .nav-item {
     transition: 0.3s;
 }
 
-.information { background-color: #E10600; }
-.projects, .timeline { background-color: #48A23F; }
-.studies, .hobbies { background-color: #373A36; }
-.contact { background-color: #0061A0; }
+.nav-item {
+    background-color: var(--cyan-khan);
+}
 
 .nav-item:hover {
     opacity: 0.8;
@@ -360,6 +374,50 @@ h2 {
     border-radius: 10px;
 }
 
+.project-item h3 {
+    font-family: 'Hack Nerd Font', monospace;
+    color: #0061A0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.project-item h4.published {
+    color: #48A23F;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.project-item h4.not-published {
+    color: #E10600;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.project-item p {
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    text-align: center;
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    color: #00cc00;
+}
+
+.more-projects a {
+    color: #48A23F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.more-projects a:hover {
+    color: #0061A0;
+}
+
 /*** FOOTER *****************************************************************************************/
 
 
@@ -432,52 +490,3 @@ h2 {
     width: 24px;
     height: 24px;
 }
-
-
-/*** TRASH ******************************************************************************************
-
-.vortex {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        from 0deg,
-        #00FF00 0deg,
-        #00FF00 10deg,
-        transparent 10deg,
-        transparent 60deg,
-        #00FF00 60deg,
-        #00FF00 70deg,
-        transparent 70deg,
-        transparent 120deg,
-        #00FF00 120deg,
-        #00FF00 130deg,
-        transparent 130deg,
-        transparent 180deg,
-        #00FF00 180deg,
-        #00FF00 190deg,
-        transparent 190deg,
-        transparent 240deg,
-        #00FF00 240deg,
-        #00FF00 250deg,
-        transparent 250deg,
-        transparent 300deg,
-        #00FF00 300deg,
-        #00FF00 310deg,
-        transparent 310deg,
-        transparent 360deg
-    );
-    transform: translate(-50%, -50%);
-    animation: spin 30s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-} */
