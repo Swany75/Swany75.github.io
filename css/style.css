@@ -142,6 +142,7 @@ header .profile-container {
 
 h2 p {
     color: var(--hacker-green);
+    font-weight: bold;
 }
 
 header img {

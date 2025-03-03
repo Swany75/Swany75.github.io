@@ -1,7 +1,6 @@
 const translations = {
 
     en: {
-
         edat: "🎂 20 years old",
         grauMitja: "💻 Technician in Microinformatics Systems Networks",
         grauSuperior: "🌐 Student in Systems and Network Administration",
@@ -19,13 +18,13 @@ const translations = {
         projecteObsidianDesc: "My personal documentation system in Obsidian. I've made significant progress, but it's not finished yet.",
         titolCertificats: "Certificates",
         titolContacte: "Contact",
-        checkProjets: "Check out more of my projects on my"
-        
-
+        checkProjets: "Check out more of my projects on my <a href='https://github.com/Swany75?tab=repositories' target='_blank'>GitHub</a>.",
+        titolCerts: "Certificates",
+        titolContact: "Contact",
+        footerText: "© 2025 Juan Dalmau. All rights reserved."
     },
 
     es: {
-
         edat: "🎂 20 años",
         grauMitja: "💻 Técnico en Sistemas Microinformáticos y Redes",
         grauSuperior: "🌐 Estudiante en Administración de Sistemas y Redes",
@@ -43,12 +42,13 @@ const translations = {
         projecteObsidianDesc: "Mi sistema de documentación personal en Obsidian. He avanzado bastante, pero aún no está terminado.",
         titolCertificats: "Certificados",
         titolContacte: "Contacto",
-        checkProjets: "Comprueba mis proyectos en mi"
-
+        checkProjets: "Comprueba mis proyectos en mi <a href='https://github.com/Swany75?tab=repositories' target='_blank'>GitHub</a>.",
+        titolCerts: "Certificados",
+        titolContact: "Contacto",
+        footerText: "© 2025 Juan Dalmau. Todos los derechos reservados."
     },
 
     ca: {
-
         edat: "🎂 20 anys",
         grauMitja: "💻 Tècnic en Sistemes Microinformàtics i Xarxes",
         grauSuperior: "🌐 Estudiant en Administració de Sistemes i Xarxes",
@@ -66,14 +66,15 @@ const translations = {
         projecteObsidianDesc: "El meu sistema de documentació personal en Obsidian. He fet un gran progrés, però encara no està acabat.",
         titolCertificats: "Certificats",
         titolContacte: "Contacte",
-        checkProjets: "Comprova els meus projectes en el meu"
-
+        checkProjets: "Comprova els meus projectes en el meu <a href='https://github.com/Swany75?tab=repositories' target='_blank'>GitHub</a>.",
+        titolCerts: "Certificats",
+        titolContact: "Contacte",
+        footerText: "© 2025 Juan Dalmau. Tots els drets reservats."
     }
 
 };
 
 function changeLanguage(lang) {
-
     // Informacio personal
     document.getElementById("edat").textContent = translations[lang].edat;
     document.getElementById("grauMitja").textContent = translations[lang].grauMitja;
@@ -81,31 +82,35 @@ function changeLanguage(lang) {
     document.getElementById("aficions").textContent = translations[lang].aficions;
 
     // Projectes
-        
     document.getElementById("titolProjectes").textContent = translations[lang].titolProjectes;
-    
-        // Projecte Arch Linux
-        document.getElementById("projecteArchLinux").textContent = translations[lang].projecteArchLinux;
-        document.getElementById("notpublished-ArchLinux").textContent = translations[lang].notpublished;
-        document.getElementById("projecteArchLinuxDesc").textContent = translations[lang].projecteArchLinuxDesc;
 
-        // Projecte Media Server 
-        document.getElementById("projecteMediaServer").textContent = translations[lang].projecteMediaServer;
-        document.getElementById("published-MediaServer").textContent = translations[lang].published;
-        document.getElementById("projecteMediaServerDesc").textContent = translations[lang].projecteMediaServerDesc;
+    // Projecte Arch Linux
+    document.getElementById("projecteArchLinux").textContent = translations[lang].projecteArchLinux;
+    document.getElementById("notpublished-ArchLinux").textContent = translations[lang].notpublished;
+    document.getElementById("projecteArchLinuxDesc").textContent = translations[lang].projecteArchLinuxDesc;
 
-        // Projecte Python Scripting
-        document.getElementById("projectePython").textContent = translations[lang].projectePython;
-        document.getElementById("published-Python").textContent = translations[lang].published;
-        document.getElementById("projectePythonDesc").textContent = translations[lang].projectePythonDesc;
+    // Projecte Media Server
+    document.getElementById("projecteMediaServer").textContent = translations[lang].projecteMediaServer;
+    document.getElementById("published-MediaServer").textContent = translations[lang].published;
+    document.getElementById("projecteMediaServerDesc").textContent = translations[lang].projecteMediaServerDesc;
 
-        // Projecte Obsidian Vault
-        document.getElementById("projecteObsidian").textContent = translations[lang].projecteObsidian;
-        document.getElementById("notpublished-Obsidian").textContent = translations[lang].notpublished;
-        document.getElementById("projecteObsidianDesc").textContent = translations[lang].projecteObsidianDesc;
+    // Projecte Python Scripting
+    document.getElementById("projectePython").textContent = translations[lang].projectePython;
+    document.getElementById("published-Python").textContent = translations[lang].published;
+    document.getElementById("projectePythonDesc").textContent = translations[lang].projectePythonDesc;
+
+    // Projecte Obsidian Vault
+    document.getElementById("projecteObsidian").textContent = translations[lang].projecteObsidian;
+    document.getElementById("notpublished-Obsidian").textContent = translations[lang].notpublished;
+    document.getElementById("projecteObsidianDesc").textContent = translations[lang].projecteObsidianDesc;
+
+    // New translations
+    document.getElementById("titolCerts").textContent = translations[lang].titolCerts;
+    document.getElementById("titolContact").textContent = translations[lang].titolContact;
+    document.querySelector("footer p").textContent = translations[lang].footerText;
+    document.getElementById("checkProjets").innerHTML = translations[lang].checkProjets;
 
     localStorage.setItem("selectedLang", lang);
-
 }
 
 function ocultItems(sectionId) {
