@@ -45,6 +45,9 @@ body {
     background-color: #373A36;
 }
 
+.window-section.hidden {
+    display: none;
+}
 
 @keyframes gradientAnimation {
     0% {
@@ -135,6 +138,10 @@ header .profile-container {
     display: flex;
     align-items:flex-start;
     width: 100%;
+}
+
+h2 p {
+    color: var(--hacker-green);
 }
 
 header img {
@@ -243,10 +250,15 @@ header nav .nav-item {
     height: 50px;
     margin: 0 5px;
     cursor: pointer;
+    transition: filter 0.3s ease;
 }
 
 .flag.grayscale {
     filter: grayscale(100%);
+}
+
+.flags img:not(.grayscale):hover {
+    filter: grayscale(0%);
 }
 
 /*** MAIN *******************************************************************************************/
@@ -352,11 +364,11 @@ h2 {
 }
 
 .hidden {
-    animation: fadeOutDown 0.3s ease forwards;
+    animation: fadeOutDown 0.5s ease forwards;
 }
 
 .visible {
-    animation: fadeInUp 0.3s ease forwards;
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 .projects-container {

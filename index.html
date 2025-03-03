@@ -21,16 +21,16 @@
                         <div class="title">
                             <h1>Juan Dalmau</h1>
                             <div class="flags">
-                                <img src="img/flags/english.png" alt="English" class="flag">
-                                <img src="img/flags/spanish.png" alt="Español" class="flag">
-                                <img src="img/flags/catalan.png" alt="Català" class="flag">
+                                <img src="img/flags/english.png" alt="English" class="flag" data-lang="en">
+                                <img src="img/flags/spanish.png" alt="Español" class="flag greyscale" data-lang="es">
+                                <img src="img/flags/catalan.png" alt="Català" class="flag greyscale" data-lang="ca">
                             </div>
                         </div>
                         <ol>
-                            <li>🎂 20 years old</li>
-                            <li>💻 Technician in Microinformatics Systems Networks</li>
-                            <li>🌐 Student in Systems and Network Administration</li>
-                            <li>🔐 Ethical Hacking & CyberSecurity Enthusiast</li>
+                            <li id="edat">🎂 20 years old</li>
+                            <li id="grauMitja">💻 Technician in Microinformatics Systems Networks</li>
+                            <li id="grauSuperior">🌐 Student in Systems and Network Administration</li>
+                            <li id="aficions">🔐 Ethical Hacking & CyberSecurity Enthusiast</li>
                         </ol>
                     </div>
                 </div>
@@ -53,65 +53,66 @@
 
             <!----- INFORMATION -------------------------------------------------------------------------------------------------------------------------------------->
             
-            <!--
-            <div class="Information">
-                <img class="test" src="img/meme.png" alt="temporalimg">
+            
+            <div id="titol-Info" class="Information">
+                <!-- <img class="test" src="img/meme.png" alt="temporalimg"> -->
             </div>
-            -->
-
+            
             <!----- PROJECTS -------------------------------------------------------------------------------------------------------------------------------------->
             
             <div class="window">
                 <h2 onclick="ocultItems('projects-toggle')">
-                    <span id="arrow">▶</span> Projects
+                    <span id="arrow">▶</span> <p id="titolProjectes"> Projects </p>
                 </h2>
-                <div id="projects-toggle" class="window-section hidden" style="display: none;">
+                <div id="projects-toggle" class="window-section hidden">
                     <div class="projects-container">
                         <div class="project-item">
-                            <h3>Arch Linux Custom DE</h3>
+                            <h3 id="projecteArchLinux">Arch Linux Custom DE</h3>
                             <a href="https://github.com/Swany75/dotfiles" target="_blank">
                                 <img src="img/projects/arch.png" alt="Arch Linux Dotfiles">
                             </a>
-                            <h4 class="not-published">Not Published</h4>
-                            <p>My personal dotfiles for my Arch Linux setup. I use i3-gaps as my window manager and Polybar as my status bar.</p>
+                            <h4 class="not-published" id="notpublished-ArchLinux">Not Published</h4>
+                            <p id="projecteArchLinuxDesc">My personal dotfiles for my Arch Linux setup. I use i3-gaps as my window manager and Polybar as my status bar.</p>
                         </div>
                         
                         <div class="project-item">
-                            <h3>Media Server</h3>
+                            <h3 id="projecteMediaServer">Media Server</h3>
                             <a href="https://sites.google.com/view/porygon-media-server" target="_blank">
                                 <img src="img/projects/media-server.png" alt="Media Server & NAS">
                             </a>
-                            <h4 class="published">Published</h4>
-                            <p>My personal media server and NAS. I use Jellyfin for media streaming and Nextcloud for cloud storage.</p>
+                            <h4 class="published" id="published-MediaServer">Published</h4>
+                            <p id="projecteMediaServerDesc">My personal media server and NAS. I use Jellyfin for media streaming and Nextcloud for cloud storage.</p>
                         </div>
                         
                         <div class="project-item">
-                            <h3>Python Scripts</h3>
+                            <h3 id="projectePython">Python Scripts</h3>
                             <a href="https://github.com/Swany75/Escambri" target="_blank">
                                 <img src="img/projects/escambri.jpg" alt="Escambri in Python">
                             </a>
-                            <h4 class="published">Published</h4>
-                            <p>I enjoy programming in Python. I've created several scripts, such as Tic-Tac-Toe and a Discord bot, but my most ambitious project is Brisca.</p>
+                            <h4 class="published" id="published-Python">Published</h4>
+                            <p id="projectePythonDesc">I enjoy programming in Python. I've created several scripts, such as Tic-Tac-Toe and a Discord bot, but my most ambitious project is Brisca.</p>
                         </div>
                         
                         <div class="project-item">
-                            <h3>Obsidian Vault</h3>
+                            <h3 id="projecteObsidian">Obsidian Vault</h3>
                             <a href="https://github.com/Swany75/Obsidian" target="_blank">
                                 <img src="img/projects/obsidian.png" alt="Obsidian Vault">
                             </a>
-                            <h4 class="not-published">Not Published</h4>
-                            <p>My personal documentation system in Obsidian. I've made significant progress, but it's not finished yet.</p>
+                            <h4 class="not-published" id="notpublished-Obsidian">Not Published</h4>
+                            <p id="projecteObsidianDesc">My personal documentation system in Obsidian. I've made significant progress, but it's not finished yet.</p>
                         </div>
                     </div>
-                    <p class="more-projects">Check out more of my projects on <a href="https://github.com/Swany75?tab=repositories">GitHub</a>.</p>                </div>
+                    <p class="more-projects" id="checkProjets">Check out more of my projects on my <a href="https://github.com/Swany75?tab=repositories">GitHub</a>.</p>                </div>
             </div>
             
+
             <!----- STUDIES -------------------------------------------------------------------------------------------------------------------------------------->
+            
             <div class="window">
                 <h2 onclick="ocultItems('certificates-toggle')">
-                    <span id="arrow">▶</span> Certificates
+                    <span id="arrow">▶</span> <p id="titolProjectes"> Certificates </p>
                 </h2>
-                <div id="certificates-toggle" class="window-section hidden" style="display: none;">
+                <div id="certificates-toggle" class="window-section hidden">
                     <div class="cert-box mastermind">
                         <img src="img/certificates/Mastermind-Comoprotegerseenlared.png" alt="Mastermind Certificate 1">
                     </div>
@@ -132,7 +133,20 @@
                     </div>
                 </div>
             </div>
+        
+            <div class="window">
+                <h2 onclick="ocultItems('contact-toggle')">
+                    <span id="arrow">▶</span> <p id="titolProjectes"> Contact </p>
+                </h2>
+                <div id="contact-toggle" class="window-section hidden">
+                    <img class="test" src="img/meme.png" alt="temporalimg">
+                </div>
+            </div>
+
         </main>
+
+        
+
         <!--- FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------->
         <footer class="c64-footer">
             <p>&copy; 2025 Juan Dalmau. All rights reserved.</p>
