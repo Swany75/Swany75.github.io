@@ -9,8 +9,48 @@
     <link rel="icon" href="https://i.pinimg.com/736x/78/57/5d/78575df8cf87f8cd15321b124daea717.jpg">
 </head>
 <body>
+
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- vertexShader -->
+    <script id="js-vertex-shader" type="x-shader/x-vertex">
+        attribute vec3 position;
+    
+        void main()	{
+        gl_Position = vec4(position, 1.0);
+        }
+    </script>
+    
+    <!-- fragmentShader -->
+    <script id="js-fragment-shader" type="x-shader/x-fragment">
+        precision highp float;
+        uniform vec2 resolution;
+        uniform float time;
+        uniform float xScale;
+        uniform float yScale;
+        uniform float distortion;
+    
+        void main() {
+            vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+    
+            float d = length(p) * distortion;
+    
+            float rx = p.x * (1.0 + d);
+            float gx = p.x;
+            float bx = p.x * (1.0 - d);
+    
+            float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+            float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+            float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+    
+            gl_FragColor = vec4(r, g, b, 1.0);
+        }
+    </script>
+
+
     <div class="main-container">
 
+        
         <!----- HEADER -------------------------------------------------------------------------------------------------------------------------------------->
         
         <header>
@@ -29,7 +69,7 @@
                         <ol>
                             <li id="edat">🎂 20 years old</li>
                             <li id="grauMitja">💻 Technician in Microinformatics Systems Networks</li>
-                            <li id="grauSuperior">🌐 Student in Systems and Network Administration</li>
+                            <li id="grauSuperior">🌐 Systems and Network Administration</li>
                             <li id="aficions">🔐 Ethical Hacking & CyberSecurity Enthusiast</li>
                         </ol>
                     </div>
@@ -146,7 +186,7 @@
                         <h3>Languages</h3>
                         <ol>
                             <li>
-                                <img src="#" alt="HTML5">
+                                <img src="img/icons" alt="HTML5">
                             </li>
                             <li>
                                 <img src="#" alt="CSS3">
@@ -165,6 +205,9 @@
                             </li>
                             <li>
                                 <img src="#" alt="PowerShell">
+                            </li>
+                            <li>
+                                <img src="#" alt="SQL">
                             </li>
                         </ol>
                     </div>
@@ -186,20 +229,6 @@
                         </ol>
                     </div>
                     <div>
-                        <h3>Databases</h3>
-                        <ol>
-                            <li>
-                                <img src="#" alt="MySQL">
-                            </li>
-                            <li>
-                                <img src="#" alt="MariaDB">
-                            </li>
-                            <li>
-                                <img src="#" alt="PostgreSQL">
-                            </li>
-                        </ol>
-                    </div>
-                    <div>
                         <h3>Tools</h3>
                         <ol>
                             <li>
@@ -216,6 +245,32 @@
                             </li>
                             <li>
                                 <img src="#" alt="Obsidian">
+                            </li>
+                            <li>
+                                <img src="#" alt="Filmora">
+                            </li>
+                            <li>
+                                <img src="#" alt="Pixlr Editor">
+                            </li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>I want to learn</h3>
+                        <ol> <!-- BSD, Kubernetes, AWS, CentOS, PowerShell, Flask, Photoshop -->
+                            <li>
+                                <img src="#" alt="BSD">
+                            </li>
+                            <li>
+                                <img src="#" alt="MacOS">
+                            </li>
+                            <li>
+                                <img src="#" alt="AWS">
+                            </li>
+                            <li>
+                                <img src="#" alt="Ansible">
+                            </li>
+                            <li>
+                                <img src="#" alt="Kubernetes">
                             </li>
                         </ol>
                     </div>
@@ -258,6 +313,11 @@
             </div>
         </footer>
     </div>
+
+    <!--- SCRIPTS --------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/wallpaper.js"></script>
 </body>
 </html>

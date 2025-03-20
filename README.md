@@ -9,3 +9,7 @@ Welcome to my website!
 This repository contains the source code for my personal website. It showcases my projects, blog posts, and other content.
 
 To see my website go to [swany75.github.io](https://swany75.github.io)
+
+## Resources
+
+We use the wallpaper from [CodePen](https://codepen.io/Web_yuki1027/pen/yLgYpWM)
