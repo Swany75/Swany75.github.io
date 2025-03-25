@@ -391,6 +391,11 @@ h3 {
     animation: fadeInUp 0.5s ease forwards;
 }
 
+h2 {
+    color: var(--hacker-green);
+    font-family: 'Hack Nerd Font', monospace;
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -404,14 +409,13 @@ h3 {
     justify-content: center;
     flex: 1 1 calc(50% - 16px);
     box-sizing: border-box;
-    background-color: var(--amstrad-dark-grey);
+    background: var(--terminal);
     border-radius: 10px;
-    border: 3px solid black;
-    border-style: double;
+    border: 1px solid var(--cyan-khan);
 }
 
 .project-item img {
-    width: 90%;
+    width: 100%;
     height: 240px;
     object-fit: cover;
     display: block;
@@ -420,18 +424,21 @@ h3 {
 
 .project-item h4 {
     font-family: 'Hack Nerd Font', monospace;
-    color: #0061A0;
+    color: var(--amstrad-blue);
     margin-top: 10px;
     text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
 }
 
-.project-item h4.published {
+.project-item h5.published {
     color: #48A23F;
     font-family: 'Source Code Pro', monospace;
     text-align: center;
 }
 
-.project-item h4.not-published {
+.project-item h5.not-published {
     color: #E10600;
     font-family: 'Source Code Pro', monospace;
     text-align: center;
@@ -505,7 +512,7 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 20px auto 0; 
+    margin: 20px auto 0;
     width: 50%;
     border-radius: 10px;
 }
