@@ -394,6 +394,7 @@ h3 {
 h2 {
     color: var(--hacker-green);
     font-family: 'Hack Nerd Font', monospace;
+    padding: 25px;
 }
 
 .projects-container {
@@ -411,7 +412,6 @@ h2 {
     box-sizing: border-box;
     background: var(--terminal);
     border-radius: 10px;
-    border: 1px solid var(--cyan-khan);
 }
 
 .project-item img {
@@ -420,6 +420,7 @@ h2 {
     object-fit: cover;
     display: block;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-item h4 {
@@ -432,22 +433,27 @@ h2 {
     margin: 5px;
 }
 
-.project-item h5.published {
-    color: #48A23F;
+.project-item h5 {
     font-family: 'Source Code Pro', monospace;
     text-align: center;
+    padding: 10px;
+}
+
+.project-item h5.published {
+    color: #48A23F;
+
 }
 
 .project-item h5.not-published {
     color: #E10600;
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
 }
 
 .project-item p {
     font-family: 'Source Code Pro', monospace;
     color: white;
     text-align: center;
+    font-size: small;
+    margin: 10px;
 }
 
 .more-projects {
@@ -501,7 +507,7 @@ h2 {
     transform: skewX(-40deg);
 }
 
-.red { background-color: #D12625; }
+.red { background-color: #D12625; box-shadow: inset; }
 .orange { background-color: #DA6241; }
 .yellow { background-color: #F1CB29; }
 .green { background-color: #4BB249; }
